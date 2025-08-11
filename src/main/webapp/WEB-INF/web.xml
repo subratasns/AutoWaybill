@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+             classpath:/xsd/web-app_3_1.xsd"
+         version="3.1">
+    
+    <!-- Servlet mapping -->
+<servlet>
+    <servlet-name>SaveWayBillAction</servlet-name>
+    <servlet-class>com.etm.dutyRota.SaveWayBillAction</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>SaveWayBillAction</servlet-name>
+    <url-pattern>/waybillCreationAuto</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>WayBillByDepotDateServlet</servlet-name>
+    <servlet-class>com.etm.dutyRota.WayBillByDepotDateServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>WayBillByDepotDateServlet</servlet-name>
+    <url-pattern>/waybillByDepotAndDate</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>WayBillVehicleServlet</servlet-name>
+    <servlet-class>com.etm.dutyRota.WayBillVehicleServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>WayBillVehicleServlet</servlet-name>
+    <url-pattern>/createWaybillByDepotDateVehicle</url-pattern>
+</servlet-mapping>
+
+</web-app>

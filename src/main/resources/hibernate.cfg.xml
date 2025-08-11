@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+      "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <!-- JDBC Database connection settings -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        
+        <!-- <property name="hibernate.connection.url">
+            jdbc:mysql://localhost:3306/oryo_track?useUnicode=true&amp;characterEncoding=UTF-8&amp;zeroDateTimeBehavior=convertToNull&amp;autoReconnect=true&amp;autoReconnectForPools=true&amp;connectTimeout=30000&amp;socketTimeout=60000&amp;tcpKeepAlive=true&amp;reconnectAtTxEnd=true&amp;maxReconnectAttempts=10
+        </property>      
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">subrata</property>  -->
+        
+        <!-- <property name="hibernate.connection.url">
+  			jdbc:mysql://3.7.163.206:3306/oryo_track?useUnicode=true&amp;characterEncoding=UTF-8&amp;zeroDateTimeBehavior=convertToNull&amp;connectTimeout=30000&amp;socketTimeout=60000&amp;tcpKeepAlive=true&amp;useSSL=false
+  		</property> 
+  		<property name="hibernate.connection.username">subrata</property>
+  		<property name="hibernate.connection.password">0YYYvH7Z0=1*p?at$v*kcfL£</property>    -->
+  		
+  		<property name="hibernate.connection.url">
+		        jdbc:mysql://103.174.86.47:3306/oryo_track?useUnicode=true&amp;characterEncoding=UTF-8&amp;zeroDateTimeBehavior=convertToNull&amp;connectTimeout=30000&amp;socketTimeout=60000&amp;tcpKeepAlive=true&amp;useSSL=false
+		</property>
+	
+	    <property name="hibernate.connection.username">trackori</property>
+	    <property name="hibernate.connection.password">TrSub%Tra!23</property> 
+	    
+	   <!--  <property name="hibernate.connection.url">
+			jdbc:mysql://localhost:3306/oryo_track?useUnicode=true&amp;characterEncoding=UTF-8&amp;zeroDateTimeBehavior=convertToNull&amp;connectTimeout=30000&amp;socketTimeout=60000&amp;tcpKeepAlive=true&amp;useSSL=false
+		</property>
+  		<property name="hibernate.connection.username">pass_module</property>
+  		<property name="hibernate.connection.password">0YYYvH7Z0=1*p?at$v*kcfL£</property>  -->
+
+        <!-- JDBC connection pool settings -->
+        <property name="hibernate.c3p0.min_size">5</property>
+        <property name="hibernate.c3p0.max_size">20</property>
+
+        <!-- Enable Hibernate's automatic session context management -->
+        <property name="hibernate.current_session_context_class">thread</property>
+
+        <!-- Echo all executed SQL to stdout -->
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.c3p0.testConnectionOnCheckout">true</property>
+		<property name="hibernate.c3p0.preferredTestQuery">SELECT 1</property>
+        
+        <!-- Retry mechanism if connection fails -->
+		<property name="hibernate.c3p0.acquireRetryAttempts">5</property>
+		<property name="hibernate.c3p0.acquireRetryDelay">2000</property>
+		<property name="hibernate.c3p0.breakAfterAcquireFailure">false</property>
+		
+		<!-- Automatically test idle connections every 5 minutes -->
+		<property name="hibernate.c3p0.idle_test_period">300</property>
+		
+		<!-- Close idle connections after 30 minutes -->
+		<property name="hibernate.c3p0.timeout">1800</property>
+        
+
+        <!-- Auto update schema -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+    </session-factory>
+</hibernate-configuration>
